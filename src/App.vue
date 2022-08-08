@@ -1,9 +1,10 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <RouterLink :to="{ name: 'EventList' }">Eventos</RouterLink> |
+    <RouterLink :to="{ name: 'TheAbout' }">Sobre</RouterLink> |
+    <RouterLink :to="{ name: 'ToDo' }">Lista de Tarefas</RouterLink>
   </nav>
-  <router-view />
+  <RouterView />
 </template>
 
 <style>
@@ -20,11 +21,15 @@ nav {
 }
 
 nav a {
+  margin: 0 10px;
   font-weight: bold;
   color: #2c3e50;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+h4 {
+  font-size: 20px;
 }
 </style>
